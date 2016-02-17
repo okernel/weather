@@ -26,6 +26,8 @@ var Weather = React.createClass({
                 <MapView
                     annotations={[this.state.pin]}
                     style={styles.map}
+                    showsUserLocation={true}
+                    followUserLocation={true}
                     onRegionChangeComplete={this.onRegionChangeComplete}
                 />
                 <View style={styles.textWrapper}>
@@ -62,6 +64,7 @@ var styles = StyleSheet.create({
     },
     textWrapper: {
         flex: 1,
+        justifyContent:'center',
         alignItems: 'center'
     },
     text: {
